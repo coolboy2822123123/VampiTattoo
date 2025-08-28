@@ -19,6 +19,12 @@ body {
     justify-content: center;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
 /* Стили для header на всех страницах */
 header {
     position: fixed;
@@ -326,13 +332,14 @@ button:hover {
     top: 20px;
     left: 20px;
     z-index: 1003;
+    background: rgba(0, 0, 0, 0);
 }
 
 .burger-icon {
     font-size: 1.5rem;
     cursor: pointer;
     color: white;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0);
     padding: 4px 8px;
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -398,7 +405,6 @@ body.aftercare-page {
     width: 100%;
     font-family: Arial, sans-serif;
     color: #fff;
-    overflow-x: hidden;
     display: flex;
     justify-content: center;
 }
@@ -594,7 +600,7 @@ body.aftercare-page {
     }
 
     .container {
-        margin-left: 10vw;
+        margin-left: -5vw;
     }
     
     /* Адаптивность бургер-меню для мобильных */
